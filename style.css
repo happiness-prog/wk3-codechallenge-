@@ -1,0 +1,225 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: slideDown 1.5s ease-out;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+.container {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.movie-list, .movie-detail {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.movie-list:hover, .movie-detail:hover {
+    transform: scale(1.02);
+    border-color: #ff5733;
+}
+
+.movie-list {
+    flex: 1;
+    max-width: 300px;
+    overflow-y: auto;
+    height: 500px;
+    background: rgba(255, 87, 51, 0.1);
+}
+
+.movie-detail {
+    flex: 2;
+    display: flex;
+    gap: 20px;
+}
+
+#poster-container {
+    flex: 1;
+}
+
+#poster {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+#movie-info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+#movie-info h2 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+    color: #ffc107;
+    font-family: 'Bebas Neue', cursive;
+}
+
+#description {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: #e0e0e0;
+}
+
+#release-date, #rating {
+    font-weight: bold;
+    margin: 5px 0;
+    color: #ffffff;
+}
+
+.ticket-info {
+    margin-top: 20px;
+    text-align: center;
+    animation: bounceIn 2s ease;
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+#available-tickets {
+    font-weight: bold;
+    color: #ffeb3b;
+    font-size: 1.5rem;
+}
+
+#buy-ticket {
+    background: #ff5733;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Poppins', sans-serif;
+}
+
+#buy-ticket:hover {
+    transform: scale(1.2);
+    background: #ff7961;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+}
+
+
+.movie-list h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #ffc107;
+    font-family: 'Bebas Neue', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+#films {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#films li {
+    padding: 12px;
+    margin: 8px 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #ffffff;
+}
+
+#films li:hover {
+    transform: scale(1.1) rotate(-1deg);
+    background: #ff5733;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+.movie-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.movie-list::-webkit-scrollbar-thumb {
+    background-color: #ff5733;
+    border-radius: 10px;
+    border: 2px solid #ffc107;
+}
+
+.movie-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-list {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .movie-detail {
+        flex-direction: column;
+    }
+}
