@@ -1,225 +1,159 @@
-/* General Styling */
+/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Modern font */
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    animation: fadeIn 2s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-header {
-    background-color: #ff5733;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    animation: slideDown 1.5s ease-out;
-}
-
-@keyframes slideDown {
-    from { transform: translateY(-100%); }
-    to { transform: translateY(0); }
-}
-
-header h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-family: 'Bebas Neue', cursive;
-    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-}
-
-/* Layout Styling */
-.container {
-    display: flex;
-    margin-top: 20px;
-    gap: 30px;
-    max-width: 1200px;
-    width: 100%;
-}
-
-.movie-list, .movie-detail {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.movie-list:hover, .movie-detail:hover {
-    transform: scale(1.02);
-    border-color: #ff5733;
-}
-
-.movie-list {
-    flex: 1;
-    max-width: 300px;
-    overflow-y: auto;
-    height: 500px;
-    background: rgba(255, 87, 51, 0.1);
-}
-
-.movie-detail {
-    flex: 2;
-    display: flex;
-    gap: 20px;
-}
-
-#poster-container {
-    flex: 1;
-}
-
-#poster {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    animation: pulse 3s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-#movie-info {
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-/* Movie Info Styling */
-#movie-info h2 {
-    font-size: 2.5rem;
-    margin: 10px 0;
-    color: #ffc107;
-    font-family: 'Bebas Neue', cursive;
-}
-
-#description {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    margin-bottom: 10px;
-    color: #e0e0e0;
-}
-
-#release-date, #rating {
-    font-weight: bold;
-    margin: 5px 0;
-    color: #ffffff;
-}
-
-.ticket-info {
-    margin-top: 20px;
-    text-align: center;
-    animation: bounceIn 2s ease;
-}
-
-@keyframes bounceIn {
-    0% { transform: scale(0.5); opacity: 0; }
-    50% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(1); }
-}
-
-#available-tickets {
-    font-weight: bold;
-    color: #ffeb3b;
-    font-size: 1.5rem;
-}
-
-#buy-ticket {
-    background: #ff5733;
-    border: none;
+    background: #f7f7f7; /* Light gray background */
+    color: #333; /* Neutral text color */
+  }
+  
+  header {
+    background: #34495e; /* Muted navy blue */
     color: white;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    font-family: 'Poppins', sans-serif;
-}
-
-#buy-ticket:hover {
-    transform: scale(1.2);
-    background: #ff7961;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
-}
-
-/* Movie List Styling */
-.movie-list h2 {
     text-align: center;
-    font-size: 1.8rem;
-    color: #ffc107;
-    font-family: 'Bebas Neue', cursive;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-#films {
+    padding: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* Movie List Styles */
+  .movie-list {
+    flex: 1;
+    max-width: 30%;
+    padding: 15px;
+    background: white; /* Clean white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-list h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #2c3e50; /* Darker navy for accents */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  
+  #films {
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-#films li {
-    padding: 12px;
-    margin: 8px 0;
-    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  #films li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background: #ecf0f1; /* Soft gray */
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
-    font-size: 1.2rem;
-    font-family: 'Poppins', sans-serif;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #34495e; /* Navy blue for text */
     text-align: center;
-    color: #ffffff;
-}
-
-#films li:hover {
-    transform: scale(1.1) rotate(-1deg);
-    background: #ff5733;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Scrollbar Styling */
-.movie-list::-webkit-scrollbar {
-    width: 8px;
-}
-
-.movie-list::-webkit-scrollbar-thumb {
-    background-color: #ff5733;
+  }
+  
+  #films li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Sold-out Class */
+  #films li.sold-out {
+    background: #bdc3c7; /* Neutral gray for sold-out */
+    color: #7f8c8d; /* Muted text color */
+    text-decoration: line-through;
+    opacity: 0.8;
+  }
+  
+  /* Movie Details Styles */
+  .movie-detail {
+    flex: 2;
+    max-width: 65%;
+    padding: 15px;
+    background: white;
     border-radius: 10px;
-    border: 2px solid #ffc107;
-}
-
-.movie-list::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #poster-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  #movie-info {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ecf0f1; /* Soft gray background */
+    border-radius: 10px;
+    color: #2c3e50; /* Darker navy for text */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #movie-info h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    color: #2c3e50; /* Consistent accent color */
+  }
+  
+  #movie-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  button#buy-ticket {
+    display: block;
+    margin: 20px auto 0;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: #2ecc71; /* Soft green for call-to-action */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  }
+  
+  button#buy-ticket:hover {
+    background: #27ae60; /* Slightly darker green on hover */
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  button#buy-ticket:disabled {
+    background: #bdc3c7; /* Neutral gray for disabled button */
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .container {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
     }
-
-    .movie-list {
-        max-width: 100%;
-        height: auto;
+  
+    .movie-list, .movie-detail {
+      max-width: 100%;
     }
-
-    .movie-detail {
-        flex-direction: column;
+  
+    button#buy-ticket {
+      width: 100%;
+      padding: 15px;
     }
-}
+  }
+  
