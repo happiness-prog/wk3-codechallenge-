@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flatdango</title>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flatdango</title>
+  <link rel ="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Flatdango</h1>
-    </header>
-    <div class="container">
-        <div class="movie-list">
-            <h2>Movies</h2>
-            <ul id="films"></ul>
-        </div>
+  <header>
+    <h1>Flatdango</h1>
+  </header>
+
+  <div class="container">
+    <div class="movie-list">
+      <h2>Movies</h2>
+      <ul id="films"></ul>
     </div>
     <div class="movie-detail">
-        <div id="poster-container">
-            <img id="poster" src="s-l1200.jpg" alt="Movie Poster">
+      <div id="poster-container">
+        <img id="poster" src="s-l1200.jpg" alt="Movie Poster">
+      </div>
+      <div id="movie-info">
+        <h2 id="title">Movie Title</h2>
+        <p id="runtime">Runtime: </p>
+        <p id="showtime">Showtimes: </p>
+        <p id="description">Description: </p>
+        <div class="ticket-info">
+          <p>Available Tickets: <span id="available-tickets">0</span></p>
+          <button id="buy-ticket">Buy Ticket</button>
         </div>
-        <div id="movie-info">
-            <h2 id="title">Movie Title</h2>
-            <p id="runtime">Movie Description</p>
-            <p id="showtime">Release Date</p>
-            <p id="Description">Rating</p>
-            <div class="ticket-info">
-                <p>Available Tickets: <span id="avialble-tickets">0</span></p>
-                <button id="buy-ticket">buy-ticket</button>
-            </div>
-        </div>
-
+      </div>
     </div>
+  </div>
 
-    </div>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

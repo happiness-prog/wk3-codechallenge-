@@ -1,4 +1,4 @@
-
+/* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -38,7 +38,7 @@ header h1 {
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
 }
 
-
+/* Layout Styling */
 .container {
     display: flex;
     margin-top: 20px;
@@ -99,7 +99,7 @@ header h1 {
     justify-content: space-between;
 }
 
-
+/* Movie Info Styling */
 #movie-info h2 {
     font-size: 2.5rem;
     margin: 10px 0;
@@ -157,7 +157,7 @@ header h1 {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
 }
 
-
+/* Movie List Styling */
 .movie-list h2 {
     text-align: center;
     font-size: 1.8rem;
@@ -192,7 +192,7 @@ header h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Scrollbar Styling */
 .movie-list::-webkit-scrollbar {
     width: 8px;
 }
@@ -207,7 +207,7 @@ header h1 {
     background: rgba(255, 255, 255, 0.1);
 }
 
-
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
