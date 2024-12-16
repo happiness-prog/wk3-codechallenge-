@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return response.json();
       })
       .then(movies => {
-        // Clear any existing list items
+        
         movieList.innerHTML = '';
 
-        // Populate movie list
+      
         movies.forEach((movie, index) => {
           const movieItem = document.createElement('li');
           movieItem.textContent = movie.title;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
           movieList.appendChild(movieItem);
         });
 
-        // Display first movie by default
+        
         if (movies.length > 0) {
           displayMovieDetails(movies[0]);
         }
@@ -60,8 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
       movie.availableTickets -= 1;
       availableTicketsElement.textContent = movie.availableTickets;
 
-      // Update the ticket count on the server
-      fetch(`http://localhost:3000/movies/${movie.id}`, {
+      
+      fetch(`http://localhost:3001/movies/${movie.id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'
@@ -83,6 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Initial fetch of movies
+  
   fetchMovies();
 });
