@@ -5,10 +5,7 @@
   "main": "script.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-  
-    "serve-json":"json-server --watch db.json"
-  
-    
+    "serve-json": "json-server --watch db.json"
   },
   "repository": {
     "type": "git",
